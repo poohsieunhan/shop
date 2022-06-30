@@ -48,7 +48,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\Auditable.cs" />
+    <Compile Include="Abstract\IAuditable.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Models\Footer.cs" />
+    <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\MenuGroup.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,5 +72,6 @@
       <Name>Shop.Data</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
