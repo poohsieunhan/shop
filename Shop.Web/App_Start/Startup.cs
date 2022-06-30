@@ -37,10 +37,12 @@ namespace Shop.Web.App_Start
 
             builder.RegisterType<ShopDbContext>().AsSelf().InstancePerRequest();
 
+            //Repository
             builder.RegisterAssemblyTypes(typeof(PostCategoryRepository).Assembly)
                 .Where(t => t.Name.EndsWith("Repository"))
                 .AsImplementedInterfaces().InstancePerRequest();
 
+            //Service
             builder.RegisterAssemblyTypes(typeof(PostCategoryService).Assembly)
                 .Where(t => t.Name.EndsWith("Service"))
                 .AsImplementedInterfaces().InstancePerRequest();

@@ -25,9 +25,16 @@ namespace Shop.Service
     {
         private IPostCategoryRepository _postCategoryRepo;
         private IUnitOfWork _unitOfWork;
-        public void Add(PostCategory post)
+
+        public PostCategoryService(IPostCategoryRepository postCategoryRepository, IUnitOfWork unitOfWork)
         {
-            _postCategoryRepo.Add(post);
+            this._postCategoryRepo = postCategoryRepository;
+            this._unitOfWork = unitOfWork;
+        }
+
+        public void Add(PostCategory pc)
+        {
+            _postCategoryRepo.Add(pc);
         }
 
         public void Delete(int id)

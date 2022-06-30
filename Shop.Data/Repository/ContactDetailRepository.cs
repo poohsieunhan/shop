@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Shop.Data.Repository
 {
-    public interface IContactDetailRepository
+    public interface IContactDetailRepository:IRepository<ContactDetail>
     {
 
     }

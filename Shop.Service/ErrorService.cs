@@ -12,7 +12,7 @@ namespace Shop.Service
     public interface IErrorService
     {
         Error Create(Error error);
-        void Save();
+        void SaveChange();
     }
 
     class ErrorService : IErrorService
@@ -31,7 +31,7 @@ namespace Shop.Service
             return _errorRepository.Add(error);
         }
 
-        public void Save()
+        public void SaveChange()
         {
             _unitOfWork.Commit();
         }
